@@ -164,7 +164,7 @@ function getAnswer() {
     if (currScenario.length === 1) {
         let l_marine = currScenario[0];
         if (isOfficer(l_marine)) {
-            answer += `Good ${dayPeriod} ${l_marine.gender === "Male" ? "Sir" : "Ma'am"} ${currScenario[0].l_name}`;
+            answer += `Good ${dayPeriod} ${l_marine.gender === "Male" ? "Sir" : "Ma'am"}`;
         }
         else {
             answer += `Good ${dayPeriod} ${l_marine.rank} ${l_marine.l_name}`;
