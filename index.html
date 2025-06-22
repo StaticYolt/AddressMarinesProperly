@@ -8,42 +8,26 @@
     </head>
     <body>
         <h1>Address Marines Properly</h1>
-        <h3>Welcome, here are the rules: <a href="https://sites.google.com/view/officercandidatesschool/things-to-know/rank-structure?authuser=0">rules</a></h3>
-        <h3>*Notes: space to refresh scenario and r to reveal answer. Warrent officers and generals are not included. Genders are random for this exercise.</h3>
-        <h2>It is the <span id="time-of-day"></span></h2>
+        <p id="welcome-text">
+            Welcome<br><br>
+            Get started Info: <a href="https://sites.google.com/view/officercandidatesschool/things-to-know/rank-structure?authuser=0">LINK</a><br>
+            <em>*Note</em> - use <kbd>space</kbd> to refresh scenario and <kbd>r</kbd> to reveal answer. Click on rank images to reveal rank name.
+        </p>
         <div id="marine-container" >
-            <div class="marine" id="1">
-                <p class="rank"></p>
-                <img src="">
-                <p class="name"></p>
-            </div>
-            <div class="marine" id="2">
-                <p class="rank"></p>
-                <img src="">
-                <p class="name"></p>
-            </div>
-            <div class="marine" id="3">
-                <p class="rank"></p>
-                <img src="">
-                <p class="name"></p>
-            </div>
-            <div class="marine" id="4">
-                <p class="rank"></p>
-                <img src="">
-                <p class="name"></p>
-            </div>
-            <div class="marine" id="5">
-                <p class="rank"></p>
-                <img src="">
-                <p class="name"></p>
-            </div>
+            <div class="marine" id="m1"></div>
+            <div class="marine" id="m2"></div>
+            <div class="marine" id="m3"></div>
+            <div class="marine" id="m4"></div>
+            <div class="marine" id="m5"></div>
         </div>
+        <h2 id="time-day">It is the <span id="time-of-day"></span></h2>
         <button id="refresh-button">Refresh</button> 
         <br>
         <button id="reveal-button"> Hover to Reveal Answer</button>
         <div id="answer-container">
             <p id="answer"></p>
         </div>
+        
         <script src="./script.js"></script>
     </body>
 </html>

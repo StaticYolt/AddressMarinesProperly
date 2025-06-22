@@ -22,7 +22,6 @@ const dataPromises = ranks.map(rank => {
             console.error(`Error fetching ${rank}:`, error);
         });
 });
-console.log("Ranks JSON:", ranksJson);
 
 
 const refreshButton = document.getElementById('refresh-button');
@@ -56,9 +55,9 @@ function generateMarine(marineElement, shouldGenerate=false) {
     const gender =  Math.random() < 0.5 ? "Male" : "Female"
     if(shouldGenerate === true) {
         marineElement.innerHTML = `
-            <h3>${marine.rank}</h3>
-            <p>${marine.f_initial}. ${marine.l_name} | ${gender}</p>
+            <h3 class=${marine.rank}>???</h3>
             <img src="./images/${marine.rank}.png" alt="${marine.rank} insignia" class="insignia">
+            <p class="m-info">${marine.f_initial}. ${marine.l_name} | ${gender}</p>
         `;
         currScenario.push({
             rank: marine.rank,
@@ -187,7 +186,16 @@ function revealAnswer() {
 }
 revealButton.addEventListener('mouseenter', revealAnswer);
 
+function revealRank(event) {
+    const marineElement = event.currentTarget;
+    const marineRankElement = marineElement.querySelector('h3');
+    marineRankElement.innerHTML = marineRankElement.className; // Reveal the rank
+}
 Promise.all(dataPromises).then(() => {
     console.log("All rank data loaded.");
+    for (m of marines) {
+        m.addEventListener('click', revealRank);
+    }
     generateRandomScenario(); // safe to call now
 });
+
