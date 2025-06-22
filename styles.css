@@ -2,6 +2,8 @@
 
 body {
     font-family: 'Courier Prime', monospace;
+    /* background-color: #bcc6f2; */
+    background-color: #c1d8f0;
 }
 img.insignia {
     width: 12.5rem;
@@ -17,7 +19,16 @@ h1 {
 }
 
 p {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
 }
 #welcome-text {
     text-align: center;
@@ -74,4 +85,15 @@ p {
 }
 #reveal-button:hover {
     background-color: #4b5320;
+}
+#footer-text {
+    margin: 10rem 0 0 2rem;
+    width: 55%;
+}
+#time-day {
+    margin: 0 0 0 2rem;
+}
+
+#answer-container {
+    text-align: center;
 }
