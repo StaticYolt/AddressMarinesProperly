@@ -63,7 +63,7 @@ h3 {
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    width: 40rem;
+    width: 80%;
     font-family: 'Courier Prime', monospace;
 }
 #refresh-button:hover {
@@ -80,7 +80,7 @@ h3 {
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    width: 40rem;
+    width: 80%;
     font-family: 'Courier Prime', monospace;
 }
 #reveal-button:hover {
